@@ -41,7 +41,7 @@ SOURCES = fastdot_c.c fastdot.ml intHashtbl.ml arry.ml util.ml data.ml bitvec.ml
 #
 # The Caml compilers. #
 # You may fix here the path to access the Caml compiler on your machine
-CAMLC = ocamlc -g
+CAMLC = ocamlc -g 
 CAMLOPT = ocamlopt -unsafe -ccopt -O4 -ccopt -ffast-math -inline 99999 
 CAMLDEP = ocamldep
 CAMLLEX = ocamllex
@@ -55,23 +55,23 @@ CUSTOM=-custom
 
 # Default setting of the WITH* variables. Should be changed if your
 # local libraries are not found by the compiler.
-WITHGRAPHICS =graphics.cma -cclib -lgraphics -cclib -L/usr/X11R6/lib -cclib -lX11
+WITHGRAPHICS =/usr/local/lib/ocaml/graphics.cma -cclib -lgraphics -cclib -L/usr/X11R6/lib -cclib -lX11
 
-WITHUNIX =unix.cma -cclib -lunix
+WITHUNIX =/usr/local/lib/ocaml/unix.cma -cclib -lunix
 
-WITHSTR =str.cma -cclib -lstr
+WITHSTR =/usr/local/lib/ocaml/str.cma -cclib -lcamlstr
 
-WITHBIGARRAY =bigarray.cma -cclib -lbigarray
+WITHBIGARRAY =/usr/local/lib/ocaml/bigarray.cma -cclib -lbigarray
 
-WITHNUMS =nums.cma -cclib -lnums
+WITHNUMS =/usr/local/lib/ocaml/nums.cma -cclib -lnums
 
-WITHTHREADS =threads.cma -cclib -lthreads
+WITHTHREADS =/usr/local/lib/ocaml/threads.cma -cclib -lthreads
 
-WITHDBM =dbm.cma -cclib -lmldbm -cclib -lndbm
+WITHDBM =/usr/local/lib/ocaml/dbm.cma -cclib -lmldbm -cclib -lndbm
 
 #WITHCLIBS =-I /usr/lib/ocaml/3.09.2/caml
-WITHCLIBS =-I /usr/lib/ocaml/caml
-
+WITHCLIBS =-I /usr/local/lib/ocaml/caml
+ 
 ################ End of user's variables #####################
 
 
